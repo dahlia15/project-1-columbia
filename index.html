@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <title>Document</title>
+
+    <style>
+        .container{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        };
+        .img {
+            padding-right: 40px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container"> 
+        <header class="jumbotron text-center">
+            <h1 class="display-4">Generate Emails with the Click of a Button</h1>
+            <p class="lead font-weight-bold">Birthdays, Graduations, Save The Dates and More!</p>
+          </header>
+    
+          <form id="form">
+            <div class="container col-md-6 float-left bg-secondary">
+            <div class="form-group font-primary">
+                    <label for="search">Life Event</label>
+                    <select class="form-control" id="lifeEvent">
+                    <option value="10">Select</option>
+                      <option value="0">Birthday</option>
+                      <option value="1">Graduation</option>
+                      <option value="2">Congratulations!</option>
+                    </select>
+            </div>
+            <div class="birthday" style="display:none;">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="search" class="form-control" id="Name" placeholder="Name" value="">
+              </div>
+              <div class="form-group">
+                <label for="Date">Event Date</label>
+                <input type="search" class="form-control" id="Date" placeholder="Event Date" value="">
+              </div>
+              <div class="form-group">
+                <label for="Fact">Fun Fact</label>
+                <input type="search" class="form-control" id="Fact" placeholder="Fun Fact" value="">
+              </div>
+
+              <div class="form-group">
+                <label for="Color">Favorite Color</label>
+                <input type="search" class="form-control" id="Color" placeholder="Favoirte Color" value="">
+              </div>
+            </div>
+
+            <div class="graduation" style="display:none;">
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="search" class="form-control" id="Name" placeholder="Name" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="Date">Grad Year</label>
+                    <input type="search" class="form-control" id="Date" placeholder="Grad Year" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="search">School</label>
+                    <select class="form-control" id="School">
+                      <option value="3">High School</option>
+                      <option value="4">College</option v>
+                      <option value="5">Grad School</option>
+                    </select>
+                </div>
+                  <div class="form-group">
+                    <label for="Fact">Fun Fact</label>
+                    <input type="search" class="form-control" id="Fact" placeholder="Fun Fact" value="">
+                  </div>
+    
+                  <div class="form-group">
+                    <label for="Color">Favorite Color</label>
+                    <input type="search" class="form-control" id="Color" placeholder="Favoirte Color" value="">
+                  </div>
+                </div>
+
+                <div class="congratulations" style="display:none;">
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="search" class="form-control" id="Name" placeholder="Name" value="">
+                      </div>
+                      <div class="form-group">
+                        <label for="search">Life Event</label>
+                        <select class="form-control" id="congrats">
+                            <option>Select</option>
+                          <option value="6">New Job</option>
+                          <option value="7">Baby on Board</option>
+                          <option value="8">Other</option>
+                        </select>
+                    </div>          
+                      <div class="form-group">
+                        <label for="Fact">Fun Fact</label>
+                        <input type="search" class="form-control" id="Fact" placeholder="Fun Fact" value="">
+                      </div>
+                    </div>
+
+                    <div class="altcongrats6" style="display:none;">
+                        <div class="form-group">
+                            <label for="job">What Are We Celebrating?</label>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Promotion</label>
+                            <label><input type="checkbox" value="">New Company</label>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="altcongrats7" style="display:none;">
+                        <div class="form-group">
+                            <label for="baby">Boy or Girl?</label>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Boy</label>
+                            <label><input type="checkbox" value="">Girl</label>
+                            <label><input type="checkbox" value="">It's a Surprise!</label>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="altcongrats8" style="display:none;">
+                        <div class="form-group">
+                            <label for="Name">Other</label>
+                            <input type="search" class="form-control" id="Name" placeholder="What Are We Celebrating?" value="">
+                          </div>
+                    </div>
+
+              <button type="submit" class="btn btn-success" id="button">Submit</button>
+            </div>  
+          </form>
+        </div>
+
+        <div class="container col-md-5 float-right" id="results">
+                <img src="https://cdn.shopify.com/s/files/1/1413/2106/products/Vintage_Notebook_Paper_12_x_12_ST_grande.png?v=1502252221" alt="notebook-paper">
+        </div>
+         
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+        $("select.form-control").on("change", function() {
+
+            if(this.value == '10') {
+            $(".birthday").hide();
+            $(".graduation").hide();
+            $(".congratulations").hide();
+            }
+            if(this.value == '0') {
+            $(".birthday").show();
+            $(".graduation").hide();
+            $(".congratulations").hide();
+            }
+
+           else if(this.value == '1')  {
+            $(".graduation").show();
+            $(".birthday").hide();
+            $(".congratulations").hide();
+            }
+
+           else if(this.value == '2') {
+            $(".congratulations").show(function() {
+                var alt6 = $(".altcongrats6");
+                var alt7 = $(".altcongrats7");
+                var alt8 = $(".altcongrats8");
+
+             if (this.value =='6'){
+                 alt6.show();
+                $(".congratulations").append(alt6);
+            }
+            else if (this.value == '7') {
+                alt7.show();
+                $(".congratulations").append(alt7);
+            }
+            else if (this.value == '8') {
+                alt8.show();
+                $(".congratulations").append(alt);               
+            }});
+            $(".graduation").hide();
+            $(".birthday").hide();
+            };
+        })});
+
+        </script>
+</body>
+</html>

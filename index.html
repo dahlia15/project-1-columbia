@@ -137,8 +137,8 @@
                                 <input type="search" class="form-control" id="Name" placeholder="What Are We Celebrating?" value="">
                                 </div>
                         </div>
-                        <button type="submit" class="btn btn-success" id="button">Submit</button>
-                    </div> 
+                    <button type="submit" class="btn btn-success" id="button">Submit</button>
+                    </div>
                 <div class="col-5 paper-image" id="results">
                     <img src="https://cdn.shopify.com/s/files/1/1413/2106/products/Vintage_Notebook_Paper_12_x_12_ST_grande.png?v=1502252221" alt="notebook-paper">
                 </div>
@@ -150,31 +150,33 @@
     <script type="text/javascript">
 
     $(document).ready(function(){
-    $("select.form-control").on("change", function() {
+        $("select.form-control").on("change", function() {
 
-        if(this.value == '0') {
-        $(".birthday").hide();
-        $(".graduation").hide();
-        $(".congratulations").hide();
-        }
-        if(this.value == '1') {
-        $(".birthday").show();
-        $(".graduation").hide();
-        $(".congratulations").hide();
-        }
+            if(this.value == '0') {
+            $(".birthday").hide();
+            $(".graduation").hide();
+            $(".congratulations").hide();
+            }
 
-        else if(this.value == '2')  {
-        $(".graduation").show();
-        $(".birthday").hide();
-        $(".congratulations").hide();
-        }
+            if(this.value == '1') {
+            $(".birthday").show();
+            $(".graduation").hide();
+            $(".congratulations").hide();
+            }
 
-        else if(this.value == '3') {
-        $(".congratulations").show(); 
-        $(".graduation").hide();
-        $(".birthday").hide();
-        };
-    })});
+            else if(this.value == '2')  {
+            $(".graduation").show();
+            $(".birthday").hide();
+            $(".congratulations").hide();
+            }
+
+            else if(this.value == '3') {
+            $(".congratulations").show(); 
+            $(".graduation").hide();
+            $(".birthday").hide();
+            };
+        })
+    });
 
     </script>
 </body>

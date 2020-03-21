@@ -12,10 +12,7 @@
   </style>
 </head>
     <form action="" class="sentence-form">
-        <input type="text" id="input-subject" placeholder="Happy Birthday">
-        <input type="text" id="input-verb" placeholder="to">
-        <input type="text" id="input-object" placeholder="you">
-        <input type="text" id="input-adjective" placeholder="beautiful">
+        <input type="text" id="input-object" placeholder="Enter Name...">
         <input type="submit" id="input-submit" value="Submit">
     </form>
     <div id="output-sentence"></div>
@@ -24,19 +21,22 @@
     <script type="text/javascript">
         var inputSubject, inputVerb, inputObject, inputAdjective;
         var adjective1, adjective2, adjective3;
-        var message = "We hope it's a ";
+        var sentence1, sentence2, sentence3;
+        var message;
 
-        adjective1 = "great";
+        adjective1 = "good";
         adjective2 = "good";
         adjective3 = "cool";
+
+        var message = "";
 
         function generateSentence() {
             var settings = {
                 "async": true,
                 "crossDomain": true,
                 "url": "https://linguatools-sentence-generating.p.rapidapi.com/realise?" + 
-                "subject=" + 
-                "&verb=" + 
+                "subject=happy birthday" + 
+                "&verb=to" + 
                 "&objdet=" + 
                 "&object=" + inputObject +
                 "&objmod=" + 
@@ -50,7 +50,8 @@
             }
 
             $.ajax(settings).done(function (response) {
-                console.log(response.sentence);
+                var message = response.sentence;
+                console.log(message);
             });
         }
 
@@ -74,7 +75,8 @@
                 $.ajax(settings).done(function (response) {
                     synonyms[i] = response;
                     var position = Math.floor(Math.random() * synonyms[i].typeOf.length);
-                    console.log(synonyms[i].typeOf[position]);
+                    sentence1 = "I hope it's a " + synonyms[i].typeOf[position] + " one."; //Split into array and combine all sentences at the end for full message
+                    console.log(sentence1);
                 });
             }
         }
@@ -85,7 +87,7 @@
             inputObject = $("#input-object").val();
 
             event.preventDefault();
-            // generateSentence();
+            generateSentence();
             getSynonyms();
         }
 

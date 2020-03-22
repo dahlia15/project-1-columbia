@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <title>Document</title>
-
+    <title>yesreply | home page</title>
 </head>
 <body>
     <div class="container"> 
@@ -16,31 +15,6 @@
             <h1 class="display-4">Generate Emails with the Click of a Button</h1>
             <p class="lead font-weight-bold">Birthdays, Graduations, Save The Dates and More!</p>
         </header>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div id="demo" class="carousel-slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ul class="carousel-indicators"></ul>
-                        <!-- The slideshow -->
-                        <div class="carousel-inner"></div>
-                        <!-- Left and right controls -->
-                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <img src="#" alt="" id="dispImg">
-                </div>
-
-            </div>
-    
         <form id="form">
             <div class="row">
                 <div class="col-7 event-form">
@@ -97,7 +71,6 @@
                             <label for="Fact">Fun Fact</label>
                             <input type="search" class="form-control" id="Fact" placeholder="Fun Fact" value="">
                         </div>
-            
                         <div class="form-group">
                             <label for="Color">Favorite Color</label>
                             <input type="search" class="form-control" id="Color" placeholder="Favoirte Color" value="">
@@ -149,17 +122,16 @@
                             <div class="form-group">
                                 <label for="Name">Other</label>
                                 <input type="search" class="form-control" id="Name" placeholder="What Are We Celebrating?" value="">
-                                </div>
+                            </div>
                         </div>
+
                         <button type="submit" class="btn btn-success" id="generate-button">Submit</button>
+                    </div>
+                    <div class="col-5">
+                        <div id="message-area"></div>
+                    </div>
                 </div>
-                <div class="col-5">
-                    <div id="message-area"></div>
-                </div>
-            </div>
-        </form>
-        
-    </div>
+            </form>
 
     <!-- <script src="scripts/carousel.js"></script> -->
     <script src="assets/scripts/sentence.js"></script>

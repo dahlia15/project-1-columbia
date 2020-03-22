@@ -28,7 +28,7 @@
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://wordsapiv1.p.rapidapi.com/words/" + word + "/typeOf",
+        "url": "https://wordsapiv1.p.rapidapi.com/words/" + word + "/synonyms",
         "method": "GET",
         "headers": {
                 "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
@@ -39,10 +39,10 @@
         $("#word-area").empty();
 
         $.ajax(settings).done(function (response) {
-            console.log(response);
+            console.log(response.synonyms[0]);
 
-            for (i = 0; i < response.typeOf.length; i++) {
-                var synonym = $("<p>").text(response.typeOf[i]);
+            for (i = 0; i < response.synonyms.length; i++) {
+                var synonym = $("<p>").text(response.synonyms[i]);
                     $("#word-area").append(synonym);
             }
         });

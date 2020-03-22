@@ -1,12 +1,11 @@
 var inputObject, inputDate, inputUserName, inputAdjective;
-// var outputSynonym;
 var message;
 
 function getSynonyms(adjective) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://wordsapiv1.p.rapidapi.com/words/" + adjective + "/typeOf",
+        "url": "https://wordsapiv1.p.rapidapi.com/words/" + adjective + "/synonyms",
         "method": "GET",
         "headers": {
                 "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
@@ -41,7 +40,7 @@ function generateSentence() {
         message = response.sentence;
         var userAdjective = getSynonyms(inputAdjective);
         userAdjective.then(function(json) {
-            $("#message-area").append("<p>").text(message).append(" I can't believe it's " + inputDate + " again. A whole year has passed by and it's just crazy. You are so " + json.typeOf[0] + ". Let's have another great one. From, " + inputUserName);
+            $("#message-area").append("<p>").text(message).append(" I can't believe it's " + inputDate + " again. A whole year has passed by and it's just crazy. You are so " + json.synonyms[Math.floor(Math.random() * json.synonyms.length)] + ". Let's have another great one. From, " + inputUserName);
         });
        
     });

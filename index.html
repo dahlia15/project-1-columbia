@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <title>Document</title>
+    <title>Email Swag Project</title>
 
 </head>
+
 <body>
-    <div class="container"> 
+    <div class="container"ß> 
         <header class="jumbotron text-center">
             <h1 class="display-4">Generate Emails with the Click of a Button</h1>
             <p class="lead font-weight-bold">Birthdays, Graduations, Save The Dates and More!</p>
@@ -20,7 +21,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <div id="demo" class="carousel-slide" data-ride="carousel">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ul class="carousel-indicators"></ul>
                         <!-- The slideshow -->
@@ -35,11 +36,15 @@
                     </div>
                 </div>
 
+                
                 <div class="col-6">
+                    <div class="image-container"></div>
                     <img src="#" alt="" id="dispImg">
+                    <div class="centered"></div>
                 </div>
 
             </div>
+        </div>
     
         <form id="form">
             <div class="row">
@@ -70,6 +75,10 @@
                             <label for="Color">Adjective to describe reciever</label>
                             <input type="search" class="form-control" id="birthday-adjective" placeholder="Adjective..." value="">
                         </div>
+                        <div class="form-group">
+                            <label for="Color">Adjective to describe reciever</label>
+                            <input type="search" class="form-control" id="birthday-adjective" placeholder="Adjective..." value="">
+                        </div>x
                         <div class="form-group">
                             <label for="Color">What is your name?</label>
                             <input type="search" class="form-control" id="birthday-user-name" placeholder="Your Name..." value="">
@@ -163,22 +172,25 @@
 
     <!-- <script src="scripts/carousel.js"></script> -->
     <script src="assets/scripts/sentence.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/scripts/carousel.js"></script>
+
+
     <script type="text/javascript">
-
-    $(document).ready(function(){
-    $("select.form-control").on("change", function() {
-
-        if(this.value == '0') {
-        $(".birthday").hide();
-        // $(".graduation").hide();
-        // $(".congratulations").hide();
-        }
-        if(this.value == '1') {
-        $(".birthday").show();
-        // $(".graduation").hide();
-        // $(".congratulations").hide();
-        }
+        $(document).ready(function(){
+            $("select.form-control").on("change", function() {      
+                if(this.value == '0') {
+                    $(".birthday").hide();
+                // $(".graduation").hide();
+                // $(".congratulations").hide();
+                }
+                if(this.value == '1') {
+                    $(".birthday").show();
+                    // $(".graduation").hide();
+                    // $(".congratulations").hide();
+                }
 
         // else if(this.value == '2')  {
         // $(".graduation").show();
@@ -195,4 +207,5 @@
 
     </script>
 </body>
+
 </html>

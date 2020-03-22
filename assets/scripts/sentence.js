@@ -41,7 +41,7 @@ function generateSentence() {
         message = response.sentence;
         var userAdjective = getSynonyms(inputAdjective);
         userAdjective.then(function(json) {
-            $("#message-area").append("<p>").text(message).append(" I can't believe it's " + inputDate + " again. A whole year has passed by and it's just crazy. You are so " + json.typeOf[0] + ". Let's have another great one. From, " + inputUserName);
+            $(".centered").append("<p>").text(message).append("<br><br> I can't believe it's " + inputDate + " again. <br> A whole year has passed by and it's just crazy. <br>You are so " + json.typeOf[0] + ". Let's have another great one.<br><br> From, " + inputUserName);
         });
        
     });
@@ -50,7 +50,7 @@ function generateSentence() {
 function enterWords() {
     event.preventDefault();
 
-    $("#message-area").empty();
+    $(".centered").empty();
     inputObject = $("#birthday-name").val();
     inputDate = $("#birthday-date").val();
     inputUserName = $("#birthday-user-name").val();

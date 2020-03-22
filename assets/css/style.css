@@ -4,22 +4,35 @@
 }
 
 #dispImg {
-width: 100%;
+    width: 100%;
 }
 
 .carousel {
-width: 100%;
+    width: 100%;
 }
 
 .carousel-item {
-width: 100%;
+    width: 100%;
 }
 
 .img-item {
-width: 100%;
+    width: 100%;
 }
 
 .event-form {
     height: 150px;
     padding-top:20px;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.centered { 
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    font-family: fantasy;
+    font-size: 14px;
 }

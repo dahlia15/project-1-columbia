@@ -64,3 +64,7 @@ body {
     top: 40px;
     padding: 0 60px;
 }
+
+#message-area {
+    color: #4D5061;
+}

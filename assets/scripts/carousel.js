@@ -4,7 +4,7 @@ var images = [
         alt: "A birthday card"
     },
     {
-        src: "https://i.imgur.com/M8ngqQD.png",
+        src: "https://i.gyazo.com/5cca3560e33fd36ced9ac9294e5bf7dc.png",
         alt: "A graduation card",
     }
     ]

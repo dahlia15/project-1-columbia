@@ -1,20 +1,25 @@
+jQuery(window).load(function() {
+    /*
+        Stop carousel
+    */
+    $('.carousel').carousel('pause');
+ 
+});
 
-    var images = [
+var images = [
     {
         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR43jTmWTzNyqMYknZyfVbx6m-UTK01zze7hL_xXqApNL2xV7dz",
-        alt: "birthday-card"
+        alt: "A birthday card"
     },
     {
-        src: "https://image.shutterstock.com/image-photo/fountain-pen-on-aged-paper-260nw-586546133.jpg",
-        alt: "Wedding-card",
+        src: "https://i.imgur.com/M8ngqQD.png",
+        alt: "A graduation card",
     }
     ]
 
     $(document).ready(function () {
-        console.log("jkrfjek");
         $(".carousel").on("click", function () {
             $(".carousel-item").each(function(){
-                console.log("bfeutk");
                 if($(this).hasClass("active")){
                     var img = $(this).find(".img-item")[0]
                     var src = $(img).attr("src")

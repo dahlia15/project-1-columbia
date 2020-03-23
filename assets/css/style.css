@@ -24,15 +24,20 @@
     padding-top:20px;
 }
 
+.birthday {
+    display: none;
+}
+
+.graduation {
+    display: none;
+}
+
 .image-container {
     position: relative;
-    text-align: center;
-    color: white;
-  }
-.centered { 
+}
+
+#message-area {
     position: absolute;
-    top: 20%;
-    left: 25%;
-    font-family: fantasy;
-    font-size: 14px;
+    top: 40px;
+    padding: 0 60px;
 }

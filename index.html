@@ -5,166 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css">
+    
     <script src="https://code.jquery.com/jquery.js"></script>
-    <title>yesreply | home page</title>
+    <script src="https://kit.fontawesome.com/f17b5acda2.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>yesreply | Home Page</title>
 </head>
 <body>
-    <div class="container"> 
+    <div class="container">
         <header class="jumbotron text-center">
             <h1 class="display-4">Generate Emails with the Click of a Button</h1>
             <p class="lead font-weight-bold">Birthdays, Graduations, Save The Dates and More!</p>
         </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators"></ul>
+                        <!-- The slideshow -->
+                        <div class="carousel-inner"></div>
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="image-container">
+                    <img src="#" alt="" id="dispImg">
+                    <div id="message-area"></div>
+                    <div class="centered"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <form id="form">
             <div class="row">
                 <div class="col-7 event-form">
                     <div class="form-group font-primary">
                         <label for="search">Life Event</label>
-                        <select class="form-control" id="lifeEvent">
+                        <select class="form-control" id="life-event">
                             <option value="0">Select</option>
                             <option value="1">Birthday</option>
-                            <!-- <option value="2">Graduation</option>
-                            <option value="3">Congratulations!</option> -->
+                            <option value="2">Graduation</option>
                         </select>
                     </div>
-                    <div class="birthday" style="display:none;">
+                    <div class="birthday">
                         <div class="form-group">
                             <label for="Name">Name</label>
-                            <input type="search" class="form-control" id="birthday-name" placeholder="Name" value="">
+                            <input type="search" class="form-control" id="birthday-name" placeholder="Enter reciever name..." value="">
                         </div>
                         <div class="form-group">
                             <label for="Date">Event Date</label>
-                            <input type="search" class="form-control" id="birthday-date" placeholder="Event Date" value="">
+                            <input type="search" class="form-control" id="birthday-date" placeholder="Enter birthdate..." value="">
                         </div>
-                        <!-- <div class="form-group">
-                            <label for="Fact">Fun Fact</label>
-                            <input type="search" class="form-control" id="Fact" placeholder="Fun Fact" value="">
-                        </div> -->
                         <div class="form-group">
                             <label for="Color">Adjective to describe reciever</label>
-                            <input type="search" class="form-control" id="birthday-adjective" placeholder="Adjective..." value="">
+                            <input type="search" class="form-control" id="birthday-adjective" placeholder="Enter adjective..." value="">
                         </div>
                         <div class="form-group">
                             <label for="Color">What is your name?</label>
-                            <input type="search" class="form-control" id="birthday-user-name" placeholder="Your Name..." value="">
+                            <input type="search" class="form-control" id="birthday-user-name" placeholder="Enter your name..." value="">
                         </div>
                     </div>
-            
-                    <div class="graduation" style="display:none;">
+                    <div class="graduation">
                         <div class="form-group">
                             <label for="Name">Name</label>
-                            <input type="search" class="form-control" id="Name" placeholder="Name" value="">
+                            <input type="search" class="form-control" id="graduation-name" placeholder="Enter reciever name...">
                         </div>
                         <div class="form-group">
                             <label for="Date">Grad Year</label>
-                            <input type="search" class="form-control" id="Date" placeholder="Grad Year" value="">
+                            <input type="search" class="form-control" id="graduation-date" placeholder="Enter grad year...">
                         </div>
                         <div class="form-group">
-                            <label for="search">School</label>
-                            <select class="form-control" id="School">
-                            <option value="4">High School</option>
-                            <option value="5">College</option v>
-                            <option value="6">Grad School</option>
-                            </select>
+                            <label for="Fact">School Name</label>
+                            <input type="search" class="form-control" id="graduation-school-name" placeholder="Enter school name...">
                         </div>
                         <div class="form-group">
-                            <label for="Fact">Fun Fact</label>
-                            <input type="search" class="form-control" id="Fact" placeholder="Fun Fact" value="">
+                            <label for="Fact">Adjective to describe reciever</label>
+                            <input type="search" class="form-control" id="graduation-adjective" placeholder="Enter adjective...">
                         </div>
                         <div class="form-group">
-                            <label for="Color">Favorite Color</label>
-                            <input type="search" class="form-control" id="Color" placeholder="Favoirte Color" value="">
+                            <label for="Color">What is your name?</label>
+                            <input type="search" class="form-control" id="graduation-user-name" placeholder="Enter your name...">
                         </div>
                     </div>
-        
-                    <div class="congratulations" style="display:none;">
-                        <div class="form-group">
-                            <label for="Name">Name</label>
-                            <input type="search" class="form-control" id="Name" placeholder="Name" value="">
-                            </div>
-                            <div class="form-group">
-                            <label for="search">Life Event</label>
-                            <select class="form-control" id="congrats">
-                                <option>Select</option>
-                                <option value="7">New Job</option>
-                                <option value="8">Baby on Board</option>
-                                <option value="9">Other</option>
-                            </select>
-                        </div>          
-                            <div class="form-group">
-                            <label for="Fact">Fun Fact</label>
-                            <input type="search" class="form-control" id="Fact" placeholder="Fun Fact" value="">
-                            </div>
-                        </div>
-        
-                        <div class="altcongrats6" style="display:none;">
-                            <div class="form-group">
-                                <label for="job">What Are We Celebrating?</label>
-                                <div class="checkbox">
-                                <label><input type="checkbox" value="">Promotion</label>
-                                <label><input type="checkbox" value="">New Company</label>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="altcongrats7" style="display:none;">
-                            <div class="form-group">
-                                <label for="baby">Boy or Girl?</label>
-                                <div class="checkbox">
-                                <label><input type="checkbox" value="">Boy</label>
-                                <label><input type="checkbox" value="">Girl</label>
-                                <label><input type="checkbox" value="">It's a Surprise!</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="altcongrats8" style="display:none;">
-                            <div class="form-group">
-                                <label for="Name">Other</label>
-                                <input type="search" class="form-control" id="Name" placeholder="What Are We Celebrating?" value="">
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-success" id="generate-button">Submit</button>
-                    </div>
-                    <div class="col-5">
-                        <div id="message-area"></div>
-                    </div>
+                    <button type="submit" class="btn btn-success" id="generate-button">Submit</button>
                 </div>
-            </form>
-
-    <!-- <script src="scripts/carousel.js"></script> -->
+                <div class="col-5">
+                    <!-- <div id="message-area"></div> -->
+                </div>
+            </div>
+        </form>
+    <script src="assets/scripts/carousel.js"></script>
     <script src="assets/scripts/sentence.js"></script>
+    <script type="text/javascript" src="assets/scripts/forms.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-
-    $(document).ready(function(){
-    $("select.form-control").on("change", function() {
-
-        if(this.value == '0') {
-        $(".birthday").hide();
-        // $(".graduation").hide();
-        // $(".congratulations").hide();
-        }
-        if(this.value == '1') {
-        $(".birthday").show();
-        // $(".graduation").hide();
-        // $(".congratulations").hide();
-        }
-
-        // else if(this.value == '2')  {
-        // $(".graduation").show();
-        // $(".birthday").hide();
-        // $(".congratulations").hide();
-        // }
-
-        // else if(this.value == '3') {
-        // $(".congratulations").show(); 
-        // $(".graduation").hide();
-        // $(".birthday").hide();
-        // };
-    })});
-
-    </script>
 </body>
 </html>

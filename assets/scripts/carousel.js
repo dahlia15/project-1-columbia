@@ -1,11 +1,3 @@
-jQuery(window).load(function() {
-    /*
-        Stop carousel
-    */
-    $('.carousel').carousel('pause');
- 
-});
-
 var images = [
     {
         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR43jTmWTzNyqMYknZyfVbx6m-UTK01zze7hL_xXqApNL2xV7dz",

@@ -5,5 +5,10 @@ $(document).ready(function(){
         }
         if(this.value == '1') {
             $(".birthday").show();
+            $(".graduation").hide();
+        }
+        if(this.value == '2') {
+            $(".graduation").show();
+            $(".birthday").hide();
         }
 })});

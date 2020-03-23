@@ -13,11 +13,17 @@
     <title>yesreply | Home Page</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container header-container">
         <header class="jumbotron text-center">
             <h1 class="display-4">Generate Emails with the Click of a Button</h1>
             <p class="lead font-weight-bold">Birthdays, Graduations, Save The Dates and More!</p>
         </header>
+        <section class="about-container">
+            <div class="jumbotron">
+                <h2 class="text-center">About YesReply</h2>
+                <p class="text-center">Crazy work schedule? Parent teacher conferences? Just no time? Never miss a birthday again! YesReply is here to make your life easier. Craft auto-generated messages to celebrate the people around you with the click of a button.</p>
+            </div>
+        </section>
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -44,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <form id="form">
+        <form id="form" class="input-form">
             <div class="row">
                 <div class="col-7 event-form">
                     <div class="form-group font-primary">
@@ -95,10 +101,7 @@
                             <input type="search" class="form-control" id="graduation-user-name" placeholder="Enter your name...">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success" id="generate-button">Submit</button>
-                </div>
-                <div class="col-5">
-                    <!-- <div id="message-area"></div> -->
+                    <button type="submit" class="btn btn-success btn-message-submit" id="generate-button">Submit</button>
                 </div>
             </div>
         </form>

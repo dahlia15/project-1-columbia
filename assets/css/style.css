@@ -1,6 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2:400,700&display=swap');
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background-color: #30323D;
+    color:#DDA448;
+    font-weight: 700;
+}
+
+.header-container .jumbotron{
+    background-color: #DDA448;
+    color: #30323D;
+}
+
+.about-container .jumbotron {
+    background-color: #4D5061;
+    color: #fff;
+}
+
 .container{
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.btn-message-submit {
+    margin-bottom: 30px;
 }
 
 #dispImg {

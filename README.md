@@ -1,6 +1,7 @@
-![](Screen Shot 2020-05-11 at 11.41.41 AM.png)
+![](Screen%20Shot%202020-05-11%20at%2011.41.41%20AM.png)
+
 # Yes Reply
-[![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)](https://github.com/carolninganga/yes-reply)
+[![GitHub%20license](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)](https://github.com/carolninganga/yes-reply)
 
 ## Description
 

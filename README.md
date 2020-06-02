@@ -1,7 +1,7 @@
 ![](Screen%20Shot%202020-05-11%20at%2011.41.41%20AM.png)
 
 # Yes Reply
-[![GitHub%20license](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)](https://github.com/dahlia15/project-1-columbia)
+[![GitHub%20license](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)](https://github.com/dahlia15/yes-reply)
 
 ## Description
 

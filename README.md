@@ -1,7 +1,7 @@
 ![](Screen%20Shot%202020-05-11%20at%2011.41.41%20AM.png)
 
 # Yes Reply
-[![GitHub%20license](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)](https://github.com/carolninganga/yes-reply)
+[![GitHub%20license](https://img.shields.io/badge/license-APACHE%202.0-blue.svg)](https://github.com/dahlia15/project-1-columbia)
 
 ## Description
 
@@ -51,5 +51,5 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact [carolninganga](undefined) directly at carolninganga@gmail.com.
+If you have any questions about the repo, open an issue or contact [dahlia15](https://github.com/dahlia15) directly at dahliaamade1@gmail.com.
 
